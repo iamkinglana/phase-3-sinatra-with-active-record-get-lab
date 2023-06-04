@@ -10,16 +10,15 @@ class ApplicationController < Sinatra::Base
 
   get '/bakeries' do
     # get all the games from the database
-    games = Bakery.all
+    bakeries = Bakery.all
     # return a JSON response with an array of all the game data
-    games.to_json
+    bakeries.to_json
   end
 
   get '/bakeries/:id' do
-
-    game = Bakery.find(params[:id])
+    bakeries = Bakery.find(params[:id])
     # send a JSON-formatted response of the game data
-    game.to_json
+    bakeries.to_json
   end
 
 
