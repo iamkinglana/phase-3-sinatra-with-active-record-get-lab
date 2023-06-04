@@ -45,4 +45,9 @@ group :test do
   gem "rspec-json_expectations", "~> 2.2"
 end
 
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+gem 'puma'
+
+
 
